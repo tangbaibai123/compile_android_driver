@@ -8,8 +8,7 @@ ifeq ($(TARGET_SUPPORT),genericarmv8)
 	KBUILD_OPTIONS += CONFIG_ARCH_SUN=y
 endif
 
-obj-m += msm/
-
+obj-m += msm_drm.ko
 all:
 	$(MAKE) -C $(KERNEL_SRC) M=$(M) modules $(KBUILD_OPTIONS)
 
